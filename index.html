@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantVA - Discover Local Plant Nurseries</title>
+    <meta name="description" content="Discover the best local plant nurseries in your area. Find indoor plants, outdoor plants, succulents, and flowers from trusted local growers.">
+    <meta name="keywords" content="plant nursery, local plants, gardening, indoor plants, outdoor plants, succulents, flowers">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <i class="fas fa-seedling"></i>
+                    <span>PlantVA</span>
+                </div>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#nurseries" class="nav-link">Nurseries</a>
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Discover Amazing Plant Nurseries Near You</h1>
+                <p class="hero-description">
+                    Find the best local plant nurseries, explore their collections, and connect with passionate plant growers in your area.
+                </p>
+                <div class="hero-search">
+                    <input type="text" id="location-search" placeholder="Enter your location..." class="search-input">
+                    <button class="search-btn" onclick="searchNurseries()">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-plant-illustration">
+                    <i class="fas fa-leaf"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Nurseries -->
+    <section id="nurseries" class="nurseries">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Nurseries</h2>
+                <p class="section-description">Discover top-rated plant nurseries in your locality</p>
+            </div>
+            
+            <div class="filter-tabs">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="indoor">Indoor Plants</button>
+                <button class="filter-btn" data-filter="outdoor">Outdoor Plants</button>
+                <button class="filter-btn" data-filter="succulents">Succulents</button>
+                <button class="filter-btn" data-filter="flowers">Flowers</button>
+            </div>
+
+            <div class="nurseries-grid" id="nurseries-grid">
+                <!-- Nursery cards will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">About PlantVA</h2>
+                    <p>PlantVA is your go-to platform for discovering the best plant nurseries in your locality. We connect plant enthusiasts with trusted nurseries, making it easier to find the perfect plants for your home, garden, or office.</p>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Local Discovery</h4>
+                                <p>Find nurseries near you with detailed location information</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-star"></i>
+                            <div>
+                                <h4>Verified Reviews</h4>
+                                <p>Read authentic reviews from fellow plant lovers</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Direct Contact</h4>
+                                <p>Connect directly with nursery owners and staff</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="plant-grid">
+                        <i class="fas fa-seedling"></i>
+                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-tree"></i>
+                        <i class="fas fa-flower"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-description">Have a nursery to add or questions about PlantVA?</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>hello@plantva.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>123 Garden Street, Plant City</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="nav-brand">
+                        <i class="fas fa-seedling"></i>
+                        <span>PlantVA</span>
+                    </div>
+                    <p>Connecting you with the best plant nurseries in your locality.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-section">
+                        <h4>Quick Links</h4>
+                        <a href="#home">Home</a>
+                        <a href="#nurseries">Nurseries</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Categories</h4>
+                        <a href="#">Indoor Plants</a>
+                        <a href="#">Outdoor Plants</a>
+                        <a href="#">Succulents</a>
+                        <a href="#">Flowers</a>
+                    </div>
+                    <div class="footer-section">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 PlantVA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

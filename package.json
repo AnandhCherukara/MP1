@@ -1,0 +1,41 @@
+{
+  "name": "plantva",
+  "version": "1.0.0",
+  "description": "A modern web platform to showcase and discover local plant nurseries",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build process needed for static site'",
+    "test": "echo 'No tests specified yet'"
+  },
+  "keywords": [
+    "plants",
+    "nursery",
+    "gardening",
+    "local-business",
+    "web-platform",
+    "responsive",
+    "javascript",
+    "html",
+    "css"
+  ],
+  "author": "PlantVA Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/plantva.git"
+  },
+  "homepage": "https://your-username.github.io/plantva/",
+  "bugs": {
+    "url": "https://github.com/your-username/plantva/issues"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
